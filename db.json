@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Ps4",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    },
+    {
+        "id": 2,
+        "name": "Ps5",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    },
+    {
+        "id": 3,
+        "name": "Xbox 360",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    },
+    {
+        "id": 4,
+        "name": "Xbox One",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    },
+    {
+        "id": 5,
+        "name": "GameCube",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    },
+    {
+        "id": 6,
+        "name": "N64",
+        "date": 1990,
+        "imageURL": "",
+        "info": ""
+    }
+]
