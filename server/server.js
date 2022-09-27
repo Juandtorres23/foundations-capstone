@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 // middleware
-app.use(express.static(path.join(__dirname, "../public/html/home.html")));
+// app.use(express.static(path.join(__dirname, "../public/html/home.html")));
 
 // serving up image
 // app.get("/", function(req, res) {
@@ -17,14 +17,14 @@ app.use(express.static(path.join(__dirname, "../public/html/home.html")));
 // });
 
 // serving up html 
-// app.get("/", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/html/home.html"));
-// });
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/home.html"));
+});
 
 // serving up css
-// app.get("/styles", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/css/home.css"))
-// })
+app.get("/styles", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/css/home.css"))
+})
 
 const port = process.env.PORT || 4040;
 
