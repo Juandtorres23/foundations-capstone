@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 // middleware
-app.use(express.static(path.join(__dirname, "../public/html")));
+app.use(express.static(path.join(__dirname, "../public/html/home.html")));
 
 // serving up image
 // app.get("/", function(req, res) {
