@@ -21,9 +21,6 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/home.html"));
 });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/links.html"));
-});
 
 
 // serving up css
