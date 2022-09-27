@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 // middleware
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join("public")));
 
 // serving up image
 // app.get("/", function(req, res) {
