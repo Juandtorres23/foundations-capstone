@@ -8,13 +8,23 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/home.html"));
-});
+// middleware
+app.use(express.static(path.join(__dirname, "../public")));
 
-app.get("/styles", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/css/home.css"))
-})
+// serving up image
+// app.get("/", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public"));
+// });
+
+// serving up html 
+// app.get("/", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/html/home.html"));
+// });
+
+// serving up css
+// app.get("/styles", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/css/home.css"))
+// })
 
 const port = process.env.PORT || 4040;
 
