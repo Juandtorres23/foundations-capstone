@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/links.css">
+    <link rel="images" href="/images/1000_F_242757347_o0ltkMQ9gOhietePjEnj8MfqQZfuhgTL.jpg">
+    <link rel="navfunctions" href="/public/nav.js">
+    <title> Foundations Capstone Project! </title>
+</head>
+<body>
+    <!-- created a navigation bar with a current navigation link 'active', 
+    hover over affect, a dropdown menu and a search bar. -->
+    
+    <Div class="topnav" id="myTopnav" >
+        <a href="home.html">Home</a>
+        <!-- <a href=""> Consoles </a> -->
+        <div class="dropdown">
+            <button class="dropbtn"> Contols </button>
+            <div class="dropdown-content">
+                <a href="control.html"> Play Station </a>
+                <a href="control.html"> XBox </a>
+                <a href="control.html"> Nintendo </a>
+            </div>
+        </div>
+        <a class="active" href="links.htm"> Links </a>
+        <!-- <li><a href=""> Ranked </a></li> -->
+        <div class="search-container">
+            <form class="searchbar" action="">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"> ~>
+                </button>
+            </form>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </Div>
+    
+    <!-- if we want nav bar to disapear on scroll, need to create js file with function (if time!) -->
+    
+    <!-- image will be in folder, change path to folder and not link -->
+    <div class="container">
+        <div class="h1-container">
+            <h1>
+                Links!
+            </h1>
+        </div>
+        <img
+            class="header-image"
+            src="https://as2.ftcdn.net/v2/jpg/02/42/75/73/1000_F_242757347_o0ltkMQ9gOhietePjEnj8MfqQZfuhgTL.jpg"
+            alt=""
+        >
+    </div>
+
+
+<!-- /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */ -->
+<script >
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+</body>
+</html>
