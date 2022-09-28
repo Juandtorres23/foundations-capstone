@@ -22,8 +22,12 @@ app.get("/", function(req, res) {
 });
 
 app.get("/links", function(req,res) {
-    res.sendFile(path.join(__dirname, "../public/html/links.html"))
-})
+    res.sendFile(path.join(__dirname, "../public/html/links.html"));
+});
+
+app.get("/control", function(req,res) {
+    res.sendFile(path.join(__dirname, "../public/html/control.html"));
+});
 
 
 
@@ -33,8 +37,13 @@ app.get("/styles", function(req, res) {
 });
 
 app.get("/links-styles", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/css/links.css"))
-})
+    res.sendFile(path.join(__dirname, "../public/css/links.css"));
+});
+
+app.get("/control-styles", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/css/control.css"));
+});
+
 
 const port = process.env.PORT || 4040;
 
