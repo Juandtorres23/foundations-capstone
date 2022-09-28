@@ -30,6 +30,10 @@ app.get("/links", function(req,res) {
 // serving up css
 app.get("/styles", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/css/home.css"))
+});
+
+app.get("/links-styles", function(req, res) {
+    res.sendFiles(path.join(__dirname, "../public/css/links.css"))
 })
 
 const port = process.env.PORT || 4040;
