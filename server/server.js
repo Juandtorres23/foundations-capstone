@@ -33,7 +33,7 @@ app.get("/styles", function(req, res) {
 });
 
 app.get("/links-styles", function(req, res) {
-    res.sendFiles(path.join(__dirname, "../public/css/links.css"))
+    res.sendFile(path.join(__dirname, "../public/css/links.css"))
 })
 
 const port = process.env.PORT || 4040;
