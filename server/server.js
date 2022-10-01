@@ -1,11 +1,17 @@
+require("dotenv").config();
 const express = require("express");
-const cors = require("cors")
-const path = require("path");
-
 const app = express();
+const cors = require("cors");
+const path = require("path");
+const { SERVER_PORT } = process.env;
+const { seed } = require("./seed.js")
+
+
 
 app.use(cors());
 app.use(express.json());
+
+app.get("/seed", seed)
 
 
 // middleware
