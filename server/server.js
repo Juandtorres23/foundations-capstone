@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const path = require("path");
+const { getHome, getLinks, getControl, getHomeCss, getLinksCss, getControlCss } = require("../server/controller")
 const { SERVER_PORT } = process.env;
 const { seed } = require("./seed.js")
 
@@ -23,32 +24,14 @@ app.get("/seed", seed)
 // });
 
 // serving up html 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/home.html"));
-});
-
-app.get("/links", function(req,res) {
-    res.sendFile(path.join(__dirname, "../public/html/links.html"));
-});
-
-app.get("/control", function(req,res) {
-    res.sendFile(path.join(__dirname, "../public/html/control.html"));
-});
-
-
+app.get("/", getHome)
+app.get("/links", getLinks)
+app.get("/control", getControl)
 
 // serving up css
-app.get("/styles", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/css/home.css"))
-});
-
-app.get("/links-styles", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/css/links.css"));
-});
-
-app.get("/control-styles", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/css/control.css"));
-});
+app.get("/styles", getHomeCss)
+app.get("/links-styles", getLinksCss)
+app.get("/control-styles", getControlCss)
 
 
 const port = process.env.PORT || 4040;
