@@ -23,7 +23,7 @@ module.exports = {
         res.sendFile(path.join(__dirname, "../public/html/links.html"))
     },
     getControl: (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/html/conrol.html"))
+        res.sendFile(path.join(__dirname, "../html/conrol.html"))
     },
     
     // functions to serve css to the server
