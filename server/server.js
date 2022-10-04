@@ -23,14 +23,14 @@ app.get("/seed", seed)
 // });
 
 // serving up html 
-app.get("/", getHome)
-app.get("/links", getLinks)
-app.get("/control", getControl)
+app.get("/", getHome);
+app.get("/links", getLinks);
+app.get("/control", getControl);
 
 // serving up css
-app.get("/styles", getHomeCss)
-app.get("/links-styles", getLinksCss)
-app.get("/control-styles", getControlCss)
+app.get("/styles", getHomeCss);
+app.get("/links-styles", getLinksCss);
+app.get("/control-styles", getControlCss);
 
 
 const port = process.env.PORT || 4040;
