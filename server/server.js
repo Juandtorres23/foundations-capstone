@@ -2,8 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const { getHome, getLinks, getControl, getHomeCss, getLinksCss, getControlCss } = require("../server/controller")
-const { SERVER_PORT } = process.env;
+const { getHome, getLinks, getControl, getHomeCss, getLinksCss, getControlCss } = require("./controller.js")
+// const { SERVER_PORT } = process.env;
 const { seed } = require("./seed.js")
 
 
