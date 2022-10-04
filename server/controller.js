@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const {CONNECTION_STRING} = process.env;
 const { Sequelize } = require("sequelize");
-console.log(CONNECTION_STRING)
+// console.log(CONNECTION_STRING)
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: "postgres", 
@@ -17,13 +17,13 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
     // functions to server html to the server
     getHome: (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/html/home.html"))
+        res.sendFile(path.join(__dirname, "../home.html"))
     },
     getLinks: (req, res) => {
         res.sendFile(path.join(__dirname, "../public/html/links.html"))
     },
     getControl: (req, res) => {
-        res.sendFile(path.join(__dirname, "../html/conrol.html"))
+        res.sendFile(path.join(__dirname, "../public/html/conrol.html"))
     },
     
     // functions to serve css to the server
