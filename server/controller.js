@@ -17,7 +17,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
   // functions to server html to the server
   getHome: (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/html/home.html"));
+    res.sendFile(path.resolve(__dirname, "../public/html/home.html"));
   },
   getLinks: (req, res) => {
     res.sendFile(path.join(__dirname, "../public/html/links.html"));
