@@ -1,18 +1,17 @@
 require("dotenv").config();
 const path = require("path");
 
-const { CONNECTION_STRING } = process.env;
-// const Sequelize = require("sequelize");
-// console.log(CONNECTION_STRING)
+const { DATABASE_URL } = process.env;
+const Sequelize = require("sequelize");
 
-// const sequelize = new Sequelize(CONNECTION_STRING, {
-//   dialect: "postgres",
-//   dialectOptions: {
-//     ssl: {
-//       rejectUnauthorized: false,
-//     },
-//   },
-// });
+const sequelize = new Sequelize(DATABASE_URL, {
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+});
 
 module.exports = {
   // functions to server html to the server
