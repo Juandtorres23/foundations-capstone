@@ -4,17 +4,17 @@ const { CONNECTION_STRING } = process.env;
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
-    dialect: "postgres", 
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorized: false
-        }
-    }
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 module.exports = {
-    seed: (req, res) => {
-        sequelize.query(`
+  seed: (req, res) => {
+    sequelize.query(`
        
 
         DROP TABLE if EXISTS info;
@@ -78,9 +78,12 @@ INSERT INTO brands (name)
             (4, ''),
             (5, ''),
             (6, '');
-        `).then(() => {
-            console.log("DB seeded!")
-            res.sendStatus(200)
-        }).catch(err => console.log("error seeding DB", err))
-    }
-}
+        `
+      )
+      .then(() => {
+        console.log("DB seeded!");
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log("error seeding DB", err));
+  },
+};
