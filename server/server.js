@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 
 const express = require("express");
 const app = express();
@@ -31,7 +32,7 @@ app.get("/seed", seed);
 
 // serving up html
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../public/html/home.html"));
+    res.sendFile(path.join(__dirname, "../public/html/home.html"));
   });
 app.get("/links", getLinks);
 app.get("/control", getControl);
