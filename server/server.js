@@ -30,7 +30,9 @@ app.get("/seed", seed);
 // });
 
 // serving up html
-app.get("/", getHome);
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../public/html/home.html"));
+  });
 app.get("/links", getLinks);
 app.get("/control", getControl);
 
