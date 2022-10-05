@@ -1,5 +1,7 @@
 require("dotenv").config();
 const path = require("path");
+// const controlContainer = document.querySelector("#contol-container");
+
 
 const { DATABASE_URL } = process.env;
 const Sequelize = require("sequelize");
@@ -35,4 +37,10 @@ module.exports = {
   getControlCss: (req, res) => {
     res.sendFile(path.join(__dirname, "../public/css/control.css"));
   },
+  getHomeImages: (req, res) => {
+    res.sendFile(path.join(__dirname, "../images/"))
+  }
+
+  //creating 
+
 };

@@ -13,6 +13,7 @@ const {
   getHomeCss,
   getLinksCss,
   getControlCss,
+  getHomeImages
 } = require("./controller.js");
 
 
@@ -39,6 +40,8 @@ app.get("/control", getControl);
 app.get("/styles", getHomeCss);
 app.get("/links-styles", getLinksCss);
 app.get("/control-styles", getControlCss);
+
+app.get("/home-images", getHomeImages);
 
 const port = process.env.PORT || 4040;
 
