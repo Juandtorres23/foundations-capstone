@@ -13,7 +13,15 @@ const {
   getHomeCss,
   getLinksCss,
   getControlCss,
-  getHomeImages
+  getHomeJs,
+  getControlJs,
+  getGlobalJs,
+  getControllers,
+  getControllersSmall,
+  getControllerLarge,
+  getControllersByBrand,
+  getComments,
+  postComments
 } = require("./controller.js");
 
 
@@ -24,7 +32,7 @@ app.use(cors());
 app.get("/seed", seed);
 
 // middleware
-// app.use(express.static(path.join(__dirname, "../public/html/home.html")));
+app.use(express.static(path.join(__dirname, "../images")));
 
 // serving up image
 // app.get("/", function(req, res) {
@@ -41,7 +49,17 @@ app.get("/styles", getHomeCss);
 app.get("/links-styles", getLinksCss);
 app.get("/control-styles", getControlCss);
 
-app.get("/home-images", getHomeImages);
+
+//Serving up js for home page
+app.get("/homejs", getHomeJs);
+app.get("/controljs", getControlJs);
+app.get("/global.js", getGlobalJs);
+app.get("/controllers", getControllers);
+app.get("/controllers/small", getControllersSmall);
+app.get("/controllers/large",  getControllerLarge);
+app.get("/controllers/brands", getControllersByBrand);
+app.get("/controllers/comments", getComments);
+app.post("/postcomments", postComments)
 
 const port = process.env.PORT || 4040;
 

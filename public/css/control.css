@@ -1,3 +1,90 @@
 #active {
     background-color: rgb(184,22,25);
   }
+ 
+  .all-control-container div {
+    /* width: 50%; */
+    text-align: center;
+  }
+  
+  /* .h1-container {
+    margin-top: 10%;
+    font-size: 30px;
+  }  */
+
+  .all-image-div {
+    width: 55%;
+  }
+  
+  .all-home-img {
+   object-fit: contain;
+   width: 100%;
+   margin-left: 7px;
+  } 
+  
+  .all-text-container {
+    width: 45%;
+    font-size: 22px;
+  } 
+
+  .all-text-container h2 {
+    margin: 7px;
+  }
+  
+  #all-control-name {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .all-smallInfo {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  
+  .all-read-more {
+    margin: 7px;
+    font-size: 20px;
+  }
+  
+  .all-read-more a {
+    text-decoration: none;
+    color: rgb(184,22,25);
+  }
+  
+  .all-read-more a:hover {
+    text-decoration:underline;
+    color: rgb(5,64,148); 
+  }
+  
+.allControllers {
+  top: 15%;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.all-control-container {
+  background-color: aliceblue;
+  border: 2px;
+  border-style: dashed;
+  border-color: rgb(219,162,30);
+  display: flex;
+  height: 350px;
+  width: 600px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 13%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+  /* overflow: visible; */
+}

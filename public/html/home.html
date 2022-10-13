@@ -12,63 +12,87 @@
     hover over affect, a dropdown menu and a search bar. -->
     
     <Div class="topnav" id="myTopnav" >
-        <a class="active" href="/">Home</a>
+        <a class="active" id="homeBtn" href="/">Home</a>
         <!-- <a href=""> Consoles </a> -->
         <div class="dropdown">
-            <button class="dropbtn" href="/control"> Controls </button>
+            <button id="dropbtn"> Controls </button>
             <div class="dropdown-content">
-                <a href="/control"> Play Station </a>
-                <a href="/control"> XBox </a>
-                <a href="/control"> Nintendo </a>
+                <a id="allBtn"> All Controls </a>
+                <a id="playBtn" class="controlBrand">Playstation</a>
+                <a id="xboxBtn" class="controlBrand">Xbox</a>
+                <a id="nintendoBtn" class="controlBrand">Nintendo</a>
             </div>
         </div>
         <a href="/links"> Links </a>
-        <!-- <li><a href=""> Ranked </a></li> -->
-        <div class="search-container">
-            <form class="searchbar" action="">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"> ~>
-                </button>
-            </form>
-        </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </Div>
     
-    <!-- if we want nav bar to disapear on scroll, need to create js file with function (if time!) -->
-    
-    <!-- image will be in folder, change path to folder and not link -->
-    <div class="container">
+
         <div class="h1-container">
-            <h1>
+            <h1 id="h1Container">
                 Controls!
             </h1>
         </div>
         <img
             class="header-image"
-            src="https://as2.ftcdn.net/v2/jpg/02/42/75/73/1000_F_242757347_o0ltkMQ9gOhietePjEnj8MfqQZfuhgTL.jpg"
-            alt=""
+            src="/homepage.jpg"
         >
 
-        <div id="control-container" >
-            <div>
-                <h2 id="homeName"></h2>
-            </div>
 
-            <div class="home-image">
+<main>
+    <section class="containers-container">
+        <div class="background-container">
+        </div>
+        <div class="control-container" id="control-container">
+            <div class="image-div">
                 <img 
-                    class="home-img"
-                    src="../../images/n64.png"
-                    href="/home-images/ps4.png"
-                    alt=""
+                class="home-img"
+                id="control-image"
+                src=""
                 > 
             </div>
-
-            <p class="smallInfo"> This is where I will add a breaf description of this controller and hopefully it looks nice!
-            </p>
-
+    
+            <div class="control-id"></div>
+            
+            <div class="text-container" >
+                <h2 id="control-name"></h2>
+                <div class="yearDiv" id="yearDiv">
+                    <a id="year"></a>
+                </div>
+                <p class="smallInfo" id="small-info"></p>
+                <p class="largeInfo" id="large-info"></p>
+                <div class="read-more" >
+                    <a > Read More..</a>
+                </div>
+            </div>
+            <div class="next-btn">
+                <a href="" id="next-btn"> Next.. </a>
+            </div>
+            
         </div>
-        
+    </section>
+    
+    <div class="postCommentCon">
+    
+        <div class="comment-form-container">
+            <form class="commentForm">
+            <input type="text" placeholder="Your Name" id="commenterName" class="commenterName">
+            <textarea type="text" placeholder="Comment Here..." id="commentInput" class="commentInput"></textarea>
+            <button type="submit" class="submitComment" > Submit</button>
+            </form>
+        </div>
+    
+        <div class="all-comment-container">
+                <!-- <p class="commenter"></p>
+                <p class="controller-name"></p>
+                <p class="comment"></p> -->
+        </div>
     </div>
+    
+        <div class="allControllers"></div>
+</main>        
+
+
 
 
 <!-- /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */ -->
@@ -82,7 +106,8 @@
     }
   }
 </script>
-<script href="/server/server.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js" integrity="sha512-26uCxGyoPL1nESYXHQ+KUmm3Maml7MEQNWU8hIt1hJaZa5KQAQ5ehBqK6eydcCOh6YAuZjV3augxu/5tY4fsgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/homejs"></script>
 
 </body>
 </html>

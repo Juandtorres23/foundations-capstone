@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles">
     <link rel="stylesheet" href="/links-styles">
-    <link rel="images" href="/images/1000_F_242757347_o0ltkMQ9gOhietePjEnj8MfqQZfuhgTL.jpg">
-    <link rel="navfunctions" href="/public/nav.js">
     <title> Foundations Capstone Project! </title>
 </head>
 <body>
@@ -15,43 +13,48 @@
     hover over affect, a dropdown menu and a search bar. -->
     
     <Div class="topnav" id="myTopnav" >
-        <a href="/">Home</a>
+        <a class="active" id="homeBtn" href="/">Home</a>
         <!-- <a href=""> Consoles </a> -->
         <div class="dropdown">
-            <button class="dropbtn"> Controls </button>
+            <button id="dropbtn"> Controls </button>
             <div class="dropdown-content">
-                <a href="/control"> Play Station </a>
-                <a href="/control"> XBox </a>
-                <a href="/control"> Nintendo </a>
+                <a id="allBtn"> All Controls </a>
+                <a id="playBtn" class="controlBrand">Playstation</a>
+                <a id="xboxBtn" class="controlBrand">Xbox</a>
+                <a id="nintendoBtn" class="controlBrand">Nintendo</a>
             </div>
         </div>
-        <a class="active" href="/links"> Links </a>
-        <!-- <li><a href=""> Ranked </a></li> -->
-        <div class="search-container">
-            <form class="searchbar" action="">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"> ~>
-                </button>
-            </form>
-        </div>
+        <a href="/links"> Links </a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </Div>
     
     <!-- if we want nav bar to disapear on scroll, need to create js file with function (if time!) -->
     
     <!-- image will be in folder, change path to folder and not link -->
-    <div class="container">
-        <div class="h1-container">
-            <h1>
-                Links!
-            </h1>
-        </div>
-        <img
-            class="header-image"
-            src="https://as2.ftcdn.net/v2/jpg/02/42/75/73/1000_F_242757347_o0ltkMQ9gOhietePjEnj8MfqQZfuhgTL.jpg"
-            alt=""
-        >
+    <div class="h1-container">
+        <h1 id="h1Container">
+            Links!
+        </h1>
     </div>
+    <img
+        class="header-image"
+        src="/homepage.jpg"
+    >
+<div class="divsDiv">
+
+    <div class="linksContainer">
+        <a href="https://www.denofgeek.com/games/playstation-controllers-history/"> Playstation 1 </a>
+        <a href="https://www.ign.com/articles/the-evolution-of-the-playstation-controller"> Playstation 5 </a>
+        <a href="https://en.wikipedia.org/wiki/GameCube_controller"> GameCube </a>
+        <a href="https://www.denofgeek.com/games/n64-controller-weird-design-history-explained-nintendo/"> Nintendo 64 </a>
+        <a href="https://www.gamespot.com/gallery/the-evolution-of-the-xbox-controller/2900-3487/#5"> Xbox 360 </a>
+        <a href="https://www.gamespot.com/gallery/the-evolution-of-the-xbox-controller/2900-3487/#5"> Xbox Series X </a>
+    </div>
+
+</div>
+
+   
+
 
 
 <!-- /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */ -->
