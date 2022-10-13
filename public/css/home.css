@@ -20,9 +20,9 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 30px;
+  padding: 16px 60px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 /* Adding an active class to highlight the current page */
@@ -213,7 +213,7 @@ Show the link that contains should open and close the topnav (.icon) */
   font-size: 40px;
   align-items: center;
   z-index: -1;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 #h1Container {
@@ -245,7 +245,7 @@ Show the link that contains should open and close the topnav (.icon) */
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-top: 150px;
+  margin-top: 170px;
   left: 50%;
   transform: translate(-50%);
   z-index: -1;
@@ -262,7 +262,7 @@ Show the link that contains should open and close the topnav (.icon) */
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-top: 150px;
+  margin-top: 170px;
   left: 50%;
   transform: translate(-50%);
   z-index: 0;
@@ -460,7 +460,8 @@ Show the link that contains should open and close the topnav (.icon) */
   align-items: center;
   justify-content:space-between;
   z-index: 1;
-  margin-top: 800px;
+  margin-top: 825px;
+  margin-bottom: 50px;
 
 }
 .comment-form-container {
